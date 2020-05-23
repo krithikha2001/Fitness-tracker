@@ -68,14 +68,15 @@
 }
 function phonenumber(inputtxt)
 {
-  var phoneno = /^\d{10}$/;
+  var phoneno = /^9[0-9]\d{9}$/;
   if((inputtxt.value.match(phoneno)))
         {
-      return true;
+        alert("correct input");
+        return true;
         }
       else
         {
-        alert("enter 10 digit number");
+        alert("enter valid number");
         return false;
         }
 }
