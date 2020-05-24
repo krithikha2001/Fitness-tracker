@@ -79,31 +79,31 @@ function formValid()
     var nameregx=/^[A-Za-z]+$/;
     var emailregx=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     var passregx= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
-    if (name.value == "" && name.value.match(nameregx) == false)                                  
+    if (name.value == "" )                                  
     { 
         window.alert("Please enter your name."); 
         name.focus(); 
         return false; 
     } 
-    if (age.value == "" && age.value.match(ageregx)==false )                               
+    if (age.value == ""  )                               
     { 
         window.alert("Please enter correct age."); 
         age.focus(); 
         return false; 
     } 
-     if (email.value == "" && email.value.match(emailregx)==false)                                   
+     if (email.value == "" )                                   
     { 
         window.alert("Please enter a valid e-mail address."); 
         email.focus(); 
         return false; 
     } 
-     if (phone.value == "" && phone.value.match(phoneno)==false )                           
+     if (phone.value == "" )                           
     { 
         window.alert("Please enter your correct telephone number."); 
         phone.focus(); 
         return false; 
     } 
-      if (password.value == "" && password.value.match(passregx)==false)                        
+      if (password.value == "")                        
      { 
         window.alert("enter password with between 7 to 15 characters which contain at least one numeric digit and a special character"); 
         password.focus(); 
