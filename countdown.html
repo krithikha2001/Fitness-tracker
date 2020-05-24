@@ -75,24 +75,19 @@
   let minute = 0;
   let seconds = 0;
   let totalSeconds = 0;
-  
   let intervalId = null;
-  
   function startTimer() {
     ++totalSeconds;
     hour = Math.floor(totalSeconds /3600);
     minute = Math.floor((totalSeconds - hour*3600)/60);
     seconds = totalSeconds - (hour*3600 + minute*60);
-
     document.getElementById("hour").innerHTML =hour;
     document.getElementById("minute").innerHTML =minute;
     document.getElementById("seconds").innerHTML =seconds;
   }
-
   document.getElementById('start-btn').addEventListener('click', () => {
     intervalId = setInterval(startTimer, 1000);
   })
-  
   document.getElementById('stop-btn').addEventListener('click', () => {
     if (intervalId)
       clearInterval(intervalId);
@@ -105,6 +100,9 @@
   });
 }
 </script>
+<section id="logon">
+      <mark><h1>COUNTDOWN FOR EXERCISING</h1></mark> 
+ </section>
 <center><div><p style="font-size: xx-large;">hours:</p><span id="hour"></span><p style="font-size: xx-large;">minutes:</p><span id="minute"></span><p style="font-size: xx-large;">seconds:</p><span id="seconds"></span></div></center>
 <center><button id="start-btn">Start</button>
 <button id="stop-btn">Stop</button>
