@@ -66,19 +66,59 @@
 }
 }
 }
-function phonenumber(inputtxt)
-{
-  var phoneno = /^9[0-9]\d{8}$/;
-  if((inputtxt.value.match(phoneno)))
-        {
-        alert("correct input");
-        return true;
-        }
-      else
-        {
-        alert("enter valid number");
-        return false;
-        }
+function formValid()                                    
+{ 
+    var name = document.forms["RegForm"]["Name"];               
+    var email = document.forms["RegForm"]["EMail"];    
+    var phone = document.forms["RegForm"]["Telephone"];  
+    var what =  document.forms["RegForm"]["Subject"];  
+    var password = document.forms["RegForm"]["Password"];  
+    var age = document.forms["RegForm"]["age"];  
+    var ageregx=/^9[0-9]\d{2}$/;
+    var phoneno=/^9[0-9]\d{8}$/;
+    var nameregx=/^[A-Za-z]+$/;
+    var emailregx=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var passregx= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+    if (name.value == "" && name.value.match(nameregx) == false)                                  
+    { 
+        window.alert("Please enter your name."); 
+        name.focus(); 
+        return false; 
+    } 
+    if (age.value == "" && age.value.match(ageregx)==false )                               
+    { 
+        window.alert("Please enter correct age."); 
+        age.focus(); 
+        return false; 
+    } 
+     if (email.value == "" && email.value.match(emailregx)==false)                                   
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+     if (phone.value == "" && phone.value.match(phoneno)==false )                           
+    { 
+        window.alert("Please enter your correct telephone number."); 
+        phone.focus(); 
+        return false; 
+    } 
+      if (password.value == "" && password.value.match(passregx)==false)                        
+     { 
+        window.alert("enter password with between 7 to 15 characters which contain at least one numeric digit and a special character"); 
+        password.focus(); 
+        return false; 
+    } 
+     if(what.selectedIndex < 1)                  
+    { 
+        alert("Please enter your gender."); 
+        what.focus(); 
+        return false; 
+    }
+    /*else{
+         alert("please enter details")
+    } */
+    return true; 
 }
     </script>
     <section id="header">
@@ -114,25 +154,30 @@ function phonenumber(inputtxt)
                 </div>
               </div>
             </section>
-<section style="background-color: black;">
+<section style="background-color: blue;">
     <section id="join">
         <div class="container">
           <center><h2><big>Join as a volunteer</big></h2></center>
           <br>
           <br>
           <br>
-          <br>
-          <div class="mail">
-            <h2 style="color:cornsilk">Enter a phone number</h2>
-            <form name="form1" action="#">
-            <ul>
-            <li><input type='text' name='text1'/></li>
-            <li>&nbsp;</li>
-            <li class="submit"><input type="submit" name="submit" value="Submit" onclick="phonenumber(document.form1.text1)"/></li>
-            <li>&nbsp;</li>
-            </ul>
-            </form>
-            </div>                   
+               <h1> REGISTRATION </h1>           
+               <form name="RegForm" onsubmit="return formValid()" method="post">  
+                   <p style="color: blue;">Name: <input type="text" name="Name"> </p><br>        
+                   <p style="color: blue;"> age: <input type="text" name="age"></p><br> 
+                   <p style="color: blue;">E-mail Address: <input type="text" name="EMail"> </p><br> 
+                    <p style="color: blue;">Password:<input type="password"  name="Password"></p><br> 
+                   <p style="color: blue;">Telephone: <input type="text" name="Telephone"></p><br>   
+                   <!--<p style="color: blue;">SELECT YOUR Gender   
+                       <select type="text" value="gender" name="Subject"> 
+                           <option>Male</option> 
+                           <option>Female</option> 
+                           <option>not to be mentioned</option> 
+                       </select></p><br><br> -->
+                   <p style="color: blue;"><input type="submit" value="send" name="Submit">  
+                       <input type="reset" value="Reset" name="Reset">   
+                   </p>          
+               </form>      
 </section>
 <section id="maps">
     <div class="header-text">
@@ -600,4 +645,3 @@ h2 big{
  </style>
 </body>
 </html>
-
