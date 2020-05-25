@@ -50,30 +50,33 @@ window.alert("Please enter your name.");
 name.focus(); 
 return false; 
 } 
-if (age.value == "")                               
+if (age.value == ""  )                               
 { 
 window.alert("Please enter correct age."); 
 age.focus(); 
 return false; 
 } 
-if (email.value == "")                                   
+if (email.value == "" )                                   
 { 
 window.alert("Please enter a valid e-mail address."); 
 email.focus(); 
 return false; 
 } 
-if (phone.value == "")                           
-{ 
-window.alert("Please enter your correct telephone number."); 
-phone.focus(); 
-return false; 
-} 
-if (password.value == "")                        
+if (password.value=="")                        
 { 
 window.alert("enter password with between 7 to 15 characters which contain at least one numeric digit and a special character"); 
 password.focus(); 
 return false; 
 } 
+if (phone.value.match(phoneno) )                           
+{
+return true;
+}
+else
+{
+alert("enter correct phone number");
+return false;
+}
 if(what.selectedIndex < 1)                  
 { 
 alert("Please enter your gender."); 
