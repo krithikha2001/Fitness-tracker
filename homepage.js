@@ -109,3 +109,29 @@ function formValid()
      document.getElementById("seconds").innerHTML = '0';
   });
 }
+    function bmi () {
+var height = Number(document.getElementById("height").value);
+var weight = Number(document.getElementById("weight").value);
+var result = (weight / (height * height)*10000);
+result=Math.round(result*100)/100;
+document.getElementById("result").innerHTML = "Your bmi score is : " + result;
+
+if(result<16)
+document.getElementById("concl").innerHTML = "You are underweight--severe thinness";
+else if(result>=16 && result<=17)
+  document.getElementById("concl").innerHTML = "You are underweight--moderate thinness";
+else if(result>17 && result<=18.5)
+document.getElementById("concl").innerHTML = "You are underweight--mild thinness";
+else if(result>18.5 && result <=25)
+document.getElementById("concl").innerHTML = "You are Normal";
+else if(result>25 && result <=30)
+document.getElementById("concl").innerHTML = "You are Overweight";
+else if(result>30 && result<=35)
+document.getElementById("concl").innerHTML = "You are Obese Class I";
+else if (result>35 && result <=40)
+document.getElementById("concl").innerHTML = "You are Obese Class II";
+else if(result>40)
+document.getElementById("concl").innerHTML = "You are Obese Class III";
+else
+document.getElementById("concl").innerHTML = "Please enter correct input";
+}
