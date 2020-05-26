@@ -33,58 +33,50 @@ tempobj.disabled=!checkobj.checked
 }
 function formValid()                                    
 { 
-var name = document.forms["RegForm"]["Name"];               
-var email = document.forms["RegForm"]["EMail"];    
-var phone = document.forms["RegForm"]["Telephone"];  
-var what =  document.forms["RegForm"]["Subject"];  
-var password = document.forms["RegForm"]["Password"];  
-var age = document.forms["RegForm"]["age"];  
-var ageregx=/^9[0-9]\d{2}$/;
-var phoneno=/^9[0-9]\d{8}$/;
-var nameregx=/^[A-Za-z]+$/;
-var emailregx=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-var passregx= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
-if (name.value=="")                                  
-{ 
-window.alert("Please enter your name."); 
-name.focus(); 
-return false; 
-} 
-if (age.value == ""  )                               
-{ 
-window.alert("Please enter correct age."); 
-age.focus(); 
-return false; 
-} 
-if (email.value == "" )                                   
-{ 
-window.alert("Please enter a valid e-mail address."); 
-email.focus(); 
-return false; 
-} 
-if (password.value=="")                        
-{ 
-window.alert("enter password with between 7 to 15 characters which contain at least one numeric digit and a special character"); 
-password.focus(); 
-return false; 
-} 
-if (phone.value.match(phoneno) )                           
-{
-return true;
-}
-else
-{
-alert("enter correct phone number");
-return false;
-}
-if(what.selectedIndex < 1)                  
-{ 
-alert("Please enter your gender."); 
-what.focus(); 
-return false; 
-}
-/*else{
- alert("please enter details")
-} */
-return true; 
+    var name = document.getElementById('name').value;               
+    var email = document.getElementById('email').value;    
+    var phone = document.getElementById('phone').value;  
+    var password =document.getElementById('password').value ;  
+    var age = document.getElementById('age').value;  
+    var ageregx=/^[0-9]{2}$/;
+    var phoneno=/^[9][0-9]{9}$/;
+    var nameregx=/^[A-Za-z]{3,30}$/;
+    var emailregx=/^[A-Za-z0-9_]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
+    var passregx=/^(?=.*[0,9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,16}$/;
+    if(nameregx.test(name)){
+         document.getElementById('username').innerHTML=" ";
+    }
+    else{
+     document.getElementById('username').innerHTML="**enter correct name**";
+     return false; 
+    }
+    if(ageregx.test(age)){
+         document.getElementById('agecheck').innerHTML=" ";
+    }
+    else{
+     document.getElementById('agecheck').innerHTML="**enter correct age**";
+     return false; 
+    }
+    
+    if(emailregx.test(email)){
+         document.getElementById('emailcheck').innerHTML=" ";
+    }
+    else{
+     document.getElementById('emailcheck').innerHTML="**enter correct email**";
+     return false; 
+    }
+    if(phoneno.test(phone)){
+         document.getElementById('phonecheck').innerHTML=" ";
+    }
+    else{
+     document.getElementById('phonecheck').innerHTML="**enter correct phone number**";
+     return false; 
+    }
+    if(passregx.test(password)){
+         document.getElementById('passwords').innerHTML=" ";
+    }
+    else{
+     document.getElementById('passwords').innerHTML="**enter correct password with atleast characters between 8 to 16 and with one upper character and a number and a special character**";
+     return false; 
+    }
 }
