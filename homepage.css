@@ -8,10 +8,29 @@ body,html {
 form {
     background-color: black;
     display: inline-block;
+    box-sizing: content-box;
+    box-shadow: 2px 2px 20px 5px black;
+    padding: 10px;
+    width:100%;
+    max-width: 400px;
+}
+#sub{
+      background-color: black;
+    display: inline-block;
+    box-sizing: content-box;
+    box-shadow: 2px 2px 20px 5px black;
+    padding: 10px;
+    width:100%;
+    max-width: 400px;
+    margin-left: 70px;
+}
+#bmi{
+     background-color: black;
+    display: inline-block;
     box-sizing: border-box;
     box-shadow: 2px 2px 20px 5px black;
-    margin-left: 370px;
     padding: 10px;
+    margin-left: 370px;
     width:100%;
     max-width: 400px;
 }

@@ -4,648 +4,180 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="/homepage.css">
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="script" href="homepage.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    </head>
-    <section id="logon">
-       <img src="http://www.oininteractive.com/wp-content/uploads/2011/01/CA-fitness-logo-PNG.png" style="width: 200px;"class="logo">
-         <mark><h1>FITNESS-TRACKER</h1></mark> 
-    </section>
-    <div id="navbar">
-      <a class="active" href="/" href="javascript:void(0)"><em><b>Home</a></b></em>
-      <a href="/" href="javascript:void(0)"><em><b>Count down for Exercise</a></b></em>
-      <a  href="/" href="javascript:void(0)"><em><b>BMI Calculator</a></b></em>
-      <a  href="/" href="javascript:void(0)"><em><b>Calorie Calculator</a></b></em>
-    </div>
-     <div class="content">
-       <nav id="side">
-        <ul>
-              <li><a href="#header">HOME</a></li>
-              <li><a href="#maps">ABOUT US</a></li>
-              <li><a href="#join">REGISTER</a></li>
-              <li><a href="#">BMI Calculator</a></li>
-              <li><a href="#">CountDown For Exercise</a></li>
-              <li><a href="#">Calorie Calculator</a></li>
-        </ul>
-    </nav>
-    <img src="https://royalposthumus.com/images/white_menu_icon.png" style="width: 100px;"id="menu">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script>
-        var menu=document.getElementById("menu");
-        var side=document.getElementById("side");
-        side.style.right="-250px";
-        menu.onclick=function(){
-            if(side.style.right=="-250px"){
-                side.style.right="0px"
-            }
-            else{
-                side.style.right="-250px"
-            }
-        }
-      var scroll = new SmoothScroll('a[href*="#"]');
-      window.onscroll = function() {myFunction()};
-       var navbar = document.getElementById("navbar");
-       var sticky = navbar.offsetTop;
-      function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-      } else {
-        navbar.classList.remove("sticky");
-      }
-    }
-        var checkobj
-    function agreesubmit(el){
-    checkobj=el
-    if (document.all||document.getElementById){
-    for (i=0;i<checkobj.form.length;i++){  //hunt down submit button
-    var tempobj=checkobj.form.elements[i]
-    if(tempobj.type.toLowerCase()=="submit")
-     tempobj.disabled=!checkobj.checked
-}
-}
-}
-function formValid()                                    
-{ 
-    var name = document.getElementById('name').value;               
-    var email = document.getElementById('email').value;    
-    var phone = document.getElementById('phone').value;  
-    var password =document.getElementById('password').value ;  
-    var age = document.getElementById('age').value;  
-    var ageregx=/^[0-9]{2}$/;
-    var phoneno=/^[9][0-9]{9}$/;
-    var nameregx=/^[A-Za-z]{3,30}$/;
-    var emailregx=/^[A-Za-z0-9_]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
-    var passregx=/^(?=.*[0,9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,16}$/;
-    if(nameregx.test(name)){
-         document.getElementById('username').innerHTML=" ";
-    }
-    else{
-     document.getElementById('username').innerHTML="**enter correct name**";
-     return false; 
-    }
-    if(ageregx.test(age)){
-         document.getElementById('agecheck').innerHTML=" ";
-    }
-    else{
-     document.getElementById('agecheck').innerHTML="**enter correct age**";
-     return false; 
-    }
-    
-    if(emailregx.test(email)){
-         document.getElementById('emailcheck').innerHTML=" ";
-    }
-    else{
-     document.getElementById('emailcheck').innerHTML="**enter correct email**";
-     return false; 
-    }
-    if(phoneno.test(phone)){
-         document.getElementById('phonecheck').innerHTML=" ";
-    }
-    else{
-     document.getElementById('phonecheck').innerHTML="**enter correct phone number**";
-     return false; 
-    }
-    if(passregx.test(password)){
-         document.getElementById('passwords').innerHTML=" ";
-    }
-    else{
-     document.getElementById('passwords').innerHTML="**enter correct password with atleast characters between 8 to 16 and with one upper character and a number and a special character**";
-     return false; 
-    }
-    
-}
-    </script>
-    <section id="header">
-        <div class="container" style="background-color:black;">
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="item active">
-                  <img src="http://www.capefearfitness.net/wp-content/uploads/2015/04/Black-and-White.jpg" style="width: 2000px;" alt="Los Angeles" >
-                  <div class="carousel-caption">
-                    <h4></h4>
-                    <p></p>
-                  </div>
-                </div>
-          
-                <div class="item">
-                  <img src="http://getwallpapers.com/wallpaper/full/8/d/6/915375-crossfit-wallpapers-1920x1280-for-ipad-2.jpg" style="width: 2000px;"alt="Chicago" >
-                  <div class="carousel-caption">
-                    <h4></h4>
-                    <p></p>
-                  </div>
-                </div>
-                <div class="item">
-                  <img src="https://www.pixelstalk.net/wp-content/uploads/2016/06/Images-HD-Fitness-Wallpapers.jpeg" alt="New york" >
-                  <div class="carousel-caption">
-                    <h4></h4>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-            </section>
-        
-<section style="background-color: blue;">
+    $(document).ready(function(){
+        $("#myModal").modal('show');
+    });
+</script>
+</head>
+<body>
+<div id="myModal" class="modal fade" >
+    <div class="modal-dialog" width=30%>
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Subscribe to our Newsletter to get regular fitness updates</h4>
+            </div>
+            <div class="modal-body" >
+                <p style="color:red;">Subscribe to our mailing list to get the latest updates straight in your inbox.</p>
+                   <center> <img src="http://www.oininteractive.com/wp-content/uploads/2011/01/CA-fitness-logo-PNG.png" style="width: 200px;"class="logo">
+</center>
+                <form id="sub">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Age">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email Address">
+                    </div><center>
+                    <button type="submit" class="btn btn-primary" data-dismiss="modal">Subscribe</button></center>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <section id="logon">
+     <img src="http://www.oininteractive.com/wp-content/uploads/2011/01/CA-fitness-logo-PNG.png" style="width: 200px;"class="logo">
+     <mark><h1>FITNESS-TRACKER</h1></mark> 
+ </section>
+ <div id="navbar">
+  <a class="active" href="/" href="">Home</a>
+  <a href="countdown.html">Count down for Exercise</a>
+  <a href="bmi.html">BMI Calculator</a>
+  <a href="calorie.html">Calorie Calculator</a>
+</div>
+<div class="content">
+ <nav id="side">
+    <ul>
+      <li><a href="#header">HOME</a></li>
+      <li><a href="#maps">ABOUT US</a></li>
+      <li><a href="#join">REGISTER</a></li>
+  </ul>
+</nav>
+<img src="https://royalposthumus.com/images/white_menu_icon.png" style="width: 100px;"id="menu">
+
+<section id="header">
+    <div class="container" style="background-color:black;">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+              <img src="http://www.capefearfitness.net/wp-content/uploads/2015/04/Black-and-White.jpg" style="width: 2000px;" alt="Los Angeles" >
+              <div class="carousel-caption">
+                <h4></h4>
+                <p></p>
+            </div>
+        </div>
+
+        <div class="item">
+          <img src="http://getwallpapers.com/wallpaper/full/8/d/6/915375-crossfit-wallpapers-1920x1280-for-ipad-2.jpg" style="width: 2000px;"alt="Chicago" >
+          <div class="carousel-caption">
+            <h4></h4>
+            <p></p>
+        </div>
+    </div>
+    <div class="item">
+      <img src="https://www.pixelstalk.net/wp-content/uploads/2016/06/Images-HD-Fitness-Wallpapers.jpeg" alt="New york" >
+      <div class="carousel-caption">
+        <h4></h4>
+        <p></p>
+    </div>
+</div>
+</div>
+</section>
+
+
+
+<section style="background-color: black;">
     <section id="join">
         <div class="container">
           <center><h2><big>Join as a volunteer</big></h2></center>
           <br>
           <br>
           <br>
-               <center><h1> REGISTRATION </h1> </center>     
-               <br>
-               <br>     
-               <center><form name="RegForm" onsubmit="return formValid()" method="post"> </center>
-                    <div class="form-group">
-               <center><p style="color: blue;">Name: <input type="text" name="Name" id="name"></p> </center>
-                    <center><span id="username" style="color: red;"></span></center>
-                         <center><br><p style="color: blue;"> age: <input type="text" name="age" id="age" ></p></center>
-                              <center><span id="agecheck" style="color: red;"></span>    </center>
-                                   <center><br><p style="color: blue;">E-mail: <input type="text" name="EMail" id="email" > </p></center>
-                                        <center><span id="emailcheck" style="color: red;"></span> </center>
-                                             <center><br> <p style="color: blue;">phone: <input type="text" name="Telephone" id="phone" ></p></center>
-                                                  <center><span id="phonecheck" style="color: red;"></span>      </center>
-                                                       <center><br> <p style="color: blue;">Password:<input type="password"  name="Password" id="password" ></p></center>
-                                                            <center><span id="passwords" style="color: red;"></span></center>     
-                                                                 <center><br><p style="color: blue;"><input type="submit" value="submit" name="Submit"  type="button" class="btn btn-success btn-lg">  
-                                                                      <input type="reset" value="Reset" name="Reset" type="button" class="btn btn-primary btn-lg">   
-                                                                            </p>  </center> 
-                                                                           </div>
-                   <script>
-</script>       
-</form>      
-</section>
+          <br>
+          <div class="mail">
+            <h2 style="color:cornsilk">Enter a phone number</h2>
+            <form name="form1" action="#">
+                <ul>
+                    <li><input type='text' name='text1'/></li>
+                    <li>&nbsp;</li>
+                    <li class="submit"><input type="submit" name="submit" value="Submit" onclick="phonenumber(document.form1.text1)"/></li>
+                    <li>&nbsp;</li>
+                </ul>
+            </form>
+        </div>                   
+    </section>
+
+
+
 <section id="maps">
     <div class="header-text">
         <h1><big><strong> ABOUT US</strong></big></h1>
         <span class="square"></span>
         <p><big><i>
           We are making this Project to Help others to stay fit by knowing their BMI, amount of calories consumed and also how to exercise with countdown timer
-        </p></big></i>
-        <div class="line">
-            <span class="line-1"></span><br>
-            <span class="line-2"></span><br>
-            <span class="line-3"></span><br>
-        </div>
+      </p></big></i>
+      <div class="line">
+        <span class="line-1"></span><br>
+        <span class="line-2"></span><br>
+        <span class="line-3"></span><br>
     </div>
+</div>
 </section>
 <section id="features">
     <div class="row">
-         <div class="col">
-           <img  src="https://cdn4.iconfinder.com/data/icons/medical-icons-rounded-vector/1250/path_health_calculator-512.png"></img>
-             <h4>BMI Calculator</h4>
-             <q>Calculates Your current BMI </q>
-        </div>
-        <div class="col">
-          <img src="https://cdn0.iconfinder.com/data/icons/ketogenic-diet-glyph/64/ketogenic-diet-calculator-calories-nutrition-512.png"></img>
-          <h4>Nutrition Calculator</h4>
-          <q>calculates the total calories consumed</q>
-        </div>
-        <div class="col">
-          <img src="https://cdn3.iconfinder.com/data/icons/auto-racing/423/Stopwatch_Timer-512.png"></img>
-          <h4>Exercise Timer</h4>
-          <q>Calculates the time while exercising</q>
-        </div>
-        <div class="col">
-            <img src="http://pngimg.com/uploads/fitness/fitness_PNG94.png"></img>
-            <h4>Fitness</h4>
-            <q>This Website supports fitness for every individual</q>
-            </div>
-        </div>
+       <div class="col">
+         <img  src="https://cdn4.iconfinder.com/data/icons/medical-icons-rounded-vector/1250/path_health_calculator-512.png"></img>
+         <h4>BMI Calculator</h4>
+         <q>Calculates Your current BMI </q>
      </div>
+     <div class="col">
+      <img src="https://cdn0.iconfinder.com/data/icons/ketogenic-diet-glyph/64/ketogenic-diet-calculator-calories-nutrition-512.png"></img>
+      <h4>Nutrition Calculator</h4>
+      <q>calculates the total calories consumed</q>
+  </div>
+  <div class="col">
+      <img src="https://cdn3.iconfinder.com/data/icons/auto-racing/423/Stopwatch_Timer-512.png"></img>
+      <h4>Exercise Timer</h4>
+      <q>Calculates the time while exercising</q>
+  </div>
+  <div class="col">
+    <img src="http://pngimg.com/uploads/fitness/fitness_PNG94.png"></img>
+    <h4>Fitness</h4>
+    <q>This Website supports fitness for every individual</q>
+</div>
+</div>
+</div>
 </section>
 <section class="footer">
   <div class="align">
-   <b><em><p style="font-size: larger;color: black;"> @Copyright 2020 Fitness-Tracker Made by @Sankirtana @Mahitha @Krithikha</p></em></b>
+     <p style="font-size: larger;"> @2020 Fitness-Tracker Made by @Sankirtana @Mahitha @Krithikha</p>
  </div>  
 </section>
- </div>
- <style>
+</div>
+<script type="text/javascript" src="homepage.js">
 
-*{
-     margin:0;
-     padding:0;
-    
-}
-body{
-     background-color: black;
-     background-image: url("https://tse4.mm.bing.net/th?id=OIP.c_JDnC24vrlpXnHHVxI6UgHaPN&pid=Api&P=0&w=300&h=300");
-}
-li {list-style-type: none;
-font-size: 16pt;
-}
-.mail {
-margin: auto;
-padding-top: 10px;
-padding-bottom: 10px;
-width: 400px;
-background : black;
-border: 1px soild silver;
-}
-.mail h2 {
-margin-left: 38px;
-}
-input {
-font-size: 20pt;
-}
-input:focus, textarea:focus{
-background-color: lightyellow;
-}
-input submit {
-font-size: 12pt;
-}
-.rq {
-color: white;
-font-size: 10pt;
-}
-#header1{
-     padding-top: 400px;
-     padding-bottom: 400px;
-     background-image: url("");
-     background-repeat: no-repeat;
-     background-color: rebeccapurple;
-     background-position: center;
-     background-size: cover; 
-}
-#header{
-     padding-top: 80px;
-     padding-bottom: 50px;
-     background-repeat: no-repeat;
-     background-color: black;
-     background-position: center;
-     background-size: cover;
-}
-.container{
-     margin-right: 50px;
-     margin-left: 50px;
-}
-.logo{
-     margin-top: 10px;
-     width:100px;
-}
-.header-text{
-     max-width: 340px;
-     margin-top: 170px;
-     margin-left: 100px;
-     margin-bottom: 100px;
-     text-shadow: 3px 2px black;
+</script>
 
-}
-h1{
-     font-size:40px ;
-     color:white;
-}
-.square{
-     height:12px;
-     width:12px;
-     display:inline-block;
-     background: white;
-     margin: 15px 0;
-}
-p big i{
-     font-size: 20px;
-     line-height: 18px;
-     color:lightgreen;
-}
-.header-text button{
-     margin-top: 20px;
-     margin-bottom: 60px;
-}
-.line-1{
-     width: 15px;
-     height:15px;
-     background:white;
-     display:inline-block;
- 
-}
-.line-2{
-     width:80px;
-     height:1px;
-     background:white ;
-     display:inline-block;
-}
-.line-3{
-     width:60px;
-     height:1px;
-     background:white;
-     display: inline-block;
-}
-.line{
-     line-height: 8px;
-}
-#side{
-     width:250px;
-     height:700px;
-     position: fixed;
-     right:-250px;
-     top:0;
-     background-color:rgba(0,0,0,0.2);
-     z-index: 2;
-     transition: 2s;
-     overflow-y: scroll;
-}
-nav ul li{
-     list-style: none;
-     margin:50px 20px;
-}
-nav ul li a{
-     text-transform: uppercase;
-     text-decoration: none;
-     color: white;
-}
-a:hover{
-     background-color:gray;
-}
-#menu{
-     width:50px;
-     position: fixed;
-     right: 65px;
-     top:35px;
-     z-index:2;
-     cursor:pointer;
-}
-#about{
-     padding:200px 0;
-     display: flex;
-     align-items: center;
-     flex-wrap: wrap;
-     background-color: rebeccapurple;
-     filter: brightness(40%);
-     filter:grayscale(10%);
-     background-position: center;
-     background-size: cover;
-}
-.right{
-     flex-basis: 50%;
-     text-align: right;
-
-}
-q blockquote big {
-     font-size: 15px;
-     line-height: 20px;
-     color:ghostwhite;
-}
-.text h2{ 
-     margin:50px 0 10px;
-     font-size:28px;
-     font-style:italic;
-}
-.text h3{
-     font-size:20px;
-     font-style: italic;
-     columns: #797979;
-}
-#features{
-     padding-top: 60px;
-     padding-bottom:60px ;
-     background-color: yellow;
-     background-image: url("https://tse2.mm.bing.net/th?id=OIP.CS-3ElqwPDmdbx6MQYMzSQHaEo&pid=Api&P=0&w=260&h=163");
-}
-.row{
-     width: 80%;
-     margin:auto;
-     display:flex;
-     align-items: center;
-     justify-content: space-around;
-     flex-wrap: wrap;
-}
-.col{
-     flex-basis: 25%;
-     text-align: center;
-}
-.col img{
-     width:100px;
-
-}
-.col h4{
-     margin-bottom: 15px;
-     font-size: 20px;
-     font-weight: 400px;
-}
-p{
-     color:white;
-}
-q{
-     color:black;
-}
-h1 big {
-     color:red;
-}
-.social{
-     width:50px;
-     position: fixed;
-     top: 75%;
-     left:0;
-     transform: translateY(-50%);
-     z-index:1;
-}
-.social img{
-     display: block;
-     width:30px;
-     margin:0 auto 20px;
-     cursor:pointer;
-}
-#maps{
-     padding-top: 115px;
-     padding-bottom: 115px;
-     display:flex;
-     align-items: center;
-     flex-wrap: wrap;
-     /*background-image: url("https://tse1.mm.bing.net/th?id=OIP.9tpZjmZMMkNyckUfbGpdqwHaHa&pid=Api&P=0&w=300&h=300");*/
-     background-color: black;
-     background-position: center;
-     background-size: contain;
-     background-repeat: repeat;
-     text-transform: uppercase;
-}
-
-p big b{
-     color:white;
-}
-h1 big strong{
-     color:white;
-}
-h1 big em{
-     color:white;
-}
-p big i em b{
-     color:white;
-     display: inline;
-}
-.text{
-     max-width: 340px;
-     margin-top: 150px;
-     margin-left: 800px;
-     margin-bottom: 100px;
-     text-shadow: 3px 2px blue;
-
-}
-.footer{
-     padding-top: 60px;
-     padding-bottom:60px ;
-     background-color: lawngreen;
-     background-image: url("https://tse2.mm.bing.net/th?id=OIP.CS-3ElqwPDmdbx6MQYMzSQHaEo&pid=Api&P=0&w=260&h=163");
-}
-.align{
-     text-align: center;
-}
-.topnav {
-     background-color:grey;
-     overflow: hidden;
-     background-image: url("https://tse2.mm.bing.net/th?id=OIP.CS-3ElqwPDmdbx6MQYMzSQHaEo&pid=Api&P=0&w=260&h=163");
-  }
-  
-.topnav a {
-     float: left;
-     color: #f2f2f2;
-     text-align: center;
-     padding: 30px;
-     text-decoration: none;
-     font-size: 17px;
-}
-.topnav a:hover {
-     background-color: grey;
-     color: darkred;
-}
-.topnav a.active {
-     background-color: darkred;
-     color:white;
-}
-mark h1{
-     color:lawngreen;
-     text-align: center;
-     text-shadow:2px 2px rgb(122, 117, 117);
-     font-size:  70px;
-     text-align-last: auto;
-     font-weight: bolder;
-}
- #logon{
-     padding-top: 5px;
-     background-color: rosybrown;
-     background-image: url("https://tse4.mm.bing.net/th?id=OIP.c_JDnC24vrlpXnHHVxI6UgHaPN&pid=Api&P=0&w=300&h=300");
-}
-.content {
-     padding: 16px;
-}
-.sticky {
-     position: fixed;
-     top: 0;
-     width: 100%;
-}
-.sticky + .content {
-     padding-top: 60px;
-}
-#navbar {
-     overflow: hidden;
-     background-color:lightgray;
-     background-image: url("https://tse2.mm.bing.net/th?id=OIP.CS-3ElqwPDmdbx6MQYMzSQHaEo&pid=Api&P=0&w=260&h=163");
-}
-#navbar a {
-     float: left;
-     display: block;
-     color: black;
-     text-align: center;
-     padding: 30px 30px;
-     text-decoration: none;
-     font-size: 17px;
-}
-#navbar a:hover {
-     background-color: #ddd;
-     color: grey;
-}
-#navbar a.active {
-     background-color: black;
-     color: white;
-}
-#pic{
-     border-radius: 70%;
-}
-#pho{
-     border-radius:50%;
-     align-content: center;
-     top:50px;
-}
-.card {
-     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-     transition: 0.3s;
-     width: 40%;
-}
-.card:hover {
-     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-.space {
-     padding: 2px 16px;
-}
-#space{
-     height:1500px;
-     background-color: rebeccapurple;
-     background-position: center;
-     background-size: cover;
-}
-#join{
-     padding-top: 50px;
-     padding-bottom: 50px;
-     display:flex;
-     align-items: center;
-     flex-wrap: wrap;
-     background-color: black;
-     /*background-image: url("https://dty8d8u6se0an.cloudfront.net/media/image/thumbnail/461682_Almeda_1440x1100.jpg");*/
-     background-position: center;
-     background-size: contain;
-     background-repeat: repeat;
-     text-transform: uppercase;
-}
-h2 big{
-     color:white;
-     text-shadow: rgba(0,0,0,0.2);
-}
-   #side a, .dropdown-btn {
-     padding: 6px 8px 6px 16px;
-     text-decoration: none;
-     font-size: 20px;
-     color: white;
-     display: block;
-     border: none;
-     background: none;
-     width: 100%;
-     text-align: left;
-     cursor: pointer;
-     outline: none;
-   }
-   
-   #side a:hover, .dropdown-btn:hover {
-     color: yellow;
-   }
-   .main {
-     margin-left: 200px; 
-     font-size: 20px; 
-     padding: 0px 10px;
-   }
-   .active {
-     background-color: yellow;
-     color: white;
-   }
-   .dropdown-container {
-     display: none;
-     background-color: rebeccapurple;
-     padding-left: 8px;
-   }
-   .fa-caret-down {
-     float: right;
-     padding-right: 8px;
-   }
-   @media screen and (max-height: 450px) {
-     #side {padding-top: 15px;}
-     #side a {font-size: 18px;}
-   }
- </style>
 </body>
 </html>
+
