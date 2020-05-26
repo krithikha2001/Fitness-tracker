@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>calories burnt</title>
+    <script type="text/javascript" src="calorie.js">
+
+    </script>
+  </head>
+  <body>
+    <div>
+      <form>
+      <h4 style="color: white;" align="center">Exercise Calculator</h4>
+        <label >select the exercise:</label>
+        <select name="exercise" id="exercise">
+          <option value="select">Select</option>
+          <option value="90">Stroll</option>
+          <option value="200">Brisk walking</option>
+          <option value="240">Aerobics</option>
+          <option value="375">Skipping</option>
+          <option value="350">Bicycling</option>
+          <option value="235">Stair climber</option>
+
+        </select><br><br>
+        <label >enter the time you've exercised:</label>
+        <input type="text" name="timehrs" id="timeh" placeholder="in hours">
+        <input type="text" name="timemins" id="timem" placeholder="in minutes"><br><br>
+        <input class = "submit" type="button"  value="Submit" onclick="Exercise()">
+        <p id="statement"></p>
+        <p id="calories"></p>
+      </form>
+    </div>
+  </body>
+</html>
