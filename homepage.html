@@ -164,19 +164,21 @@ function formValid()
                <br>
                <br>     
                <center><form name="RegForm" onsubmit="return formValid()" method="post"> </center>
+                    <div class="form-group">
                <center><p style="color: blue;">Name: <input type="text" name="Name" id="name"></p> </center>
                     <center><span id="username" style="color: red;"></span></center>
-                         <center><br><p style="color: blue;"> age: <input type="text" name="age" id="age"></p></center>
+                         <center><br><p style="color: blue;"> age: <input type="text" name="age" id="age" ></p></center>
                               <center><span id="agecheck" style="color: red;"></span>    </center>
-                                   <center><br><p style="color: blue;">E-mail: <input type="text" name="EMail" id="email"> </p></center>
+                                   <center><br><p style="color: blue;">E-mail: <input type="text" name="EMail" id="email" > </p></center>
                                         <center><span id="emailcheck" style="color: red;"></span> </center>
-                                             <center><br> <p style="color: blue;">phone: <input type="text" name="Telephone" id="phone"></p></center>
+                                             <center><br> <p style="color: blue;">phone: <input type="text" name="Telephone" id="phone" ></p></center>
                                                   <center><span id="phonecheck" style="color: red;"></span>      </center>
-                                                       <center><br> <p style="color: blue;">Password:<input type="password"  name="Password" id="password"></p></center>
+                                                       <center><br> <p style="color: blue;">Password:<input type="password"  name="Password" id="password" ></p></center>
                                                             <center><span id="passwords" style="color: red;"></span></center>     
-                                                                 <center><br><p style="color: blue;"><input type="submit" value="send" name="Submit">  
-                                                                      <input type="reset" value="Reset" name="Reset">   
+                                                                 <center><br><p style="color: blue;"><input type="submit" value="submit" name="Submit"  type="button" class="btn btn-success btn-lg">  
+                                                                      <input type="reset" value="Reset" name="Reset" type="button" class="btn btn-primary btn-lg">   
                                                                             </p>  </center> 
+                                                                           </div>
                    <script>
 </script>       
 </form>      
