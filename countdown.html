@@ -18,8 +18,8 @@
          <mark><h1>FITNESS-TRACKER</h1></mark> 
     </section>
     <div id="navbar">
-      <a class="active" href="/" href="javascript:void(0)"><em><b>Home</a></b></em>
-      <a href="/" href="javascript:void(0)"><em><b>Count down for Exercise</a></b></em>
+      <a  href="/" href="javascript:void(0)"><em><b>Home</a></b></em>
+      <a class="active" href="/" href="javascript:void(0)"><em><b>Count down for Exercise</a></b></em>
       <a  href="/" href="javascript:void(0)"><em><b>BMI Calculator</a></b></em>
       <a  href="/" href="javascript:void(0)"><em><b>Calorie Calculator</a></b></em>
     </div>
@@ -68,7 +68,7 @@
 }
     </script>
     <section id="header">
-        <div class="container" style="background-color:blue;">
+        <div class="container">
     <script>
   window.onload = () => {
   let hour = 0;
@@ -100,15 +100,16 @@
   });
 }
 </script>
-<section id="logon">
-      <mark><h1>COUNTDOWN FOR EXERCISING</h1></mark> 
+<section style="background-image: url('https://ctl.s6img.com/society6/img/lkik91aVlQwwdJTuQopNh0u2tnE/h_264,w_264/wall-clocks/front/natural-frame-frame/white-hands-hands/~artwork,fw_3498,fh_3501,fx_-9,fy_-446,iw_3487,ih_4650/s6-original-art-uploads/society6/uploads/misc/f9afa0e893494c8ebff06d4984f9f105/~~/kyoto-nights-wall-clocks.jpg');">
+     <mark><h1><em>COUNTDOWN FOR EXERCISE</em></h1></mark> 
  </section>
-<center><div><p style="font-size: xx-large;">hours:</p><p style="font-size: xx-large;">⬇️</p><span id="hour"></span><p style="font-size: xx-large;">minutes:</p><p style="font-size: xx-large;">⬇️</p><span id="minute"></span><p style="font-size: xx-large;">seconds:</p><p style="font-size: xx-large;">⬇️</p><span id="seconds"></span></div></center>
-<center><button id="start-btn">Start</button>
-<button id="stop-btn">Stop</button>
-<button id="reset-btn">Reset</button></center>
+ <section style="background-image: url('https://ctl.s6img.com/society6/img/lkik91aVlQwwdJTuQopNh0u2tnE/h_264,w_264/wall-clocks/front/natural-frame-frame/white-hands-hands/~artwork,fw_3498,fh_3501,fx_-9,fy_-446,iw_3487,ih_4650/s6-original-art-uploads/society6/uploads/misc/f9afa0e893494c8ebff06d4984f9f105/~~/kyoto-nights-wall-clocks.jpg');">
+<center><div><p style="font-size: xx-large;color: black;">HOURS:</p><p style="font-size: xx-large;">⬇️</p><span id="hour"></span><p style="font-size: xx-large;color: black;">MINUTES:</p><p style="font-size: xx-large;">⬇️</p><span id="minute"></span><p style="font-size: xx-large;color: black;">SECONDS:</p><p style="font-size: xx-large;">⬇️</p><span id="seconds"></span></div></center><br>
+<center><button id="start-btn"  type="button" class="btn btn-success btn-lg">Start</button>
+<button id="stop-btn" type="button" class="btn btn-danger btn-lg">Stop</button>
+<button id="reset-btn" type="button" class="btn btn-primary btn-lg">Reset</button></center>
 </div>
-            </section>
+</section>
 <section id="features">
     <div class="row">
          <div class="col">
@@ -155,15 +156,15 @@ li {list-style-type: none;
 font-size: 16pt;
 }
 #hour{
-    color:white;
+    color:black;
     font-size: xx-large;
 }
 #minute{
-    color:white;
+    color:black;
     font-size: xx-large;
 }
 #seconds{
-    color:white;
+    color:black;
     font-size: xx-large;
 }
 .mail {
@@ -434,6 +435,14 @@ mark h1{
      color:lawngreen;
      text-align: center;
      text-shadow:2px 2px rgb(122, 117, 117);
+     font-size:  70px;
+     text-align-last: auto;
+     font-weight: bolder;
+}
+mark h1 em{
+     color:rgb(44, 42, 42);
+     text-align: center;
+     text-shadow:2px 2px pink;
      font-size:  70px;
      text-align-last: auto;
      font-weight: bolder;
