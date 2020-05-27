@@ -498,5 +498,44 @@ h2 big{
      #side a {font-size: 18px;}
    }
  </style>
+ <script>
+     
+     var menu=document.getElementById("menu");
+        var side=document.getElementById("side");
+        side.style.right="-250px";
+        menu.onclick=function(){
+            if(side.style.right=="-250px"){
+                side.style.right="0px"
+            }
+            else{
+                side.style.right="-250px"
+            }
+        }
+      var scroll = new SmoothScroll('a[href*="#"]');
+      window.onscroll = function() {myFunction()};
+       var navbar = document.getElementById("navbar");
+       var sticky = navbar.offsetTop;
+      function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+        var checkobj
+    function agreesubmit(el){
+    checkobj=el
+    if (document.all||document.getElementById){
+    for (i=0;i<checkobj.form.length;i++){  //hunt down submit button
+    var tempobj=checkobj.form.elements[i]
+    if(tempobj.type.toLowerCase()=="submit")
+     tempobj.disabled=!checkobj.checked
+}
+}
+}
+
+
+
+ </script>
 </body>
 </html>
