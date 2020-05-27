@@ -190,29 +190,29 @@ function formValid()
 <section style="background-color: blue;">
     <section id="join">
         <div class="container">
+             <div id="mail">
           <center><h2><big>Join as a volunteer</big></h2></center>
-          <br>
-          <br>
           <br>
                <center><h1> REGISTRATION </h1> </center>     
                <br>
                <br>     
                <center><form name="RegForm" onsubmit="return formValid()" method="post"> </center>
-                    <div class="form-group">
+                    <div class="">
               <center><p style="color: blue;">Name: <input type="text" name="Name" id="name"></p></center>
                <center><span id="username" style="color: red;"></span></center>
-                         <center><br><p style="color: blue;"> age: <input type="text" name="age" id="age" ></p></center>
+                         <center><br><p style="color: blue;"> age: <input type="text" name="age" id="age"></p></center>
                          <center><span id="agecheck" style="color: red;"></span>    </center>
                                    <center><br><p style="color: blue;">E-mail: <input type="text" name="EMail" id="email" > </p></center>
                                    <center><span id="emailcheck" style="color: red;"></span> </center>
                                              <center><br> <p style="color: blue;">phone: <input type="text" name="Telephone" id="phone" ></p></center>
-                                                  <center><span id="phonecheck" style="color: red;"></span>      </center>
+                                                  <center><span id="phonecheck" style="color: red;"></span></center>
                                                        <center><br> <p style="color: blue;">Password:<input type="password"  name="Password" id="password" ></p></center>
                                                             <center><span id="passwords" style="color: red;"></span></center>     
-                                                                 <center><br><p style="color: blue;"><input type="submit" value="submit" name="Submit"  type="button" class="btn btn-success btn-lg">  
-                                                                      <input type="reset" value="Reset" name="Reset" type="button" class="btn btn-primary btn-lg">   
+                                                                 <center><br><p style="color: blue;"><input type="submit" value="submit" name="Submit" type="button" class="btn btn-success btn-lg" id="test">  
+                                                                      <input type="reset" value="Reset" name="Reset" type="button" class="btn btn-primary btn-lg" id="test">   
                                                                             </p>  </center> 
                                                                            </div>   
+                                                                      </div>
 </form>      
 </section>
 <section id="maps">
@@ -780,6 +780,31 @@ h2 big{
      #side {padding-top: 15px;}
      #side a {font-size: 18px;}
 }
- </style>
+#test{
+    height:50px;
+    width:100px;
+
+}
+#age{
+     height:50px;
+    width:400px;
+}
+#name{
+     height:50px;
+    width:400px;
+}
+#email{
+     height:50px;
+    width:400px;
+}
+#phone{
+     height:50px;
+    width:400px;
+}
+#password{
+     height:50px;
+    width:400px;
+}
+</style>
 </body>
 </html>
