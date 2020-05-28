@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>exercise calculator</title>
-    <link rel="stylesheet" href="exercisecalc.css">
+    <link rel="stylesheet" href="homepage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -19,11 +19,13 @@
          <mark><h1>FITNESS-TRACKER</h1></mark>
     </section>
     <div id="navbar">
-      <a class="active" href="/" href="javascript:void(0)"><em><b>Home</a></b></em>
-      <a href="/" href="javascript:void(0)"><em><b>Count down for Exercise</a></b></em>
-      <a  href="/" href="javascript:void(0)"><em><b>BMI Calculator</a></b></em>
-      <a  href="/" href="javascript:void(0)"><em><b>Calorie Calculator</a></b></em>
+      <a  href="homepage.html" ><em><b>Home</a></b></em>
+      <a href="countdown.html"><em><b>Count down for Exercise</a></b></em>
+      <a  href="bmi.html"><em><b>BMI Calculator</a></b></em>
+      <a class="active"  href=""><em><b>Calorie Calculator</a></b></em>
+      <a   href="exercise.html"><em><b>Yoga Facts</a></b></em>
     </div>
+   
     <section id="header">
     <div class="container" style="background-color:black;">
       <h3  align="center" style="color:white">Exercise Calculator</h3>
@@ -43,13 +45,11 @@
         <label style="color:white">Enter the time you've exercised:</label>
         <input type="text" name="timehrs" id="timeh" value=0 placeholder="in hours">hours &nbsp;
         <input type="text" name="timemins" id="timem" value =0 placeholder="in minutes">minutes<br><br>
-        <button type="button" onclick="myFunction()">Add activity</button>
-        <p id="demo"></p>
+        <button type="button" onclick="myFunction()">Add activity</button><br>
         <input type="text" name="dem" id="dem" value=0 placeholder="---">kcal for activity
         <br><br>
          <input type="text" name="cal" id="cal" value=0  placeholder="---">kcal in total for the day!
-         <p id="statement"></p>
-        <p id="calories"></p>
+        
       </form>
     </div>
     </section>
@@ -82,5 +82,25 @@
         <b><em><p style="font-size: larger;color: black;"> @Copyright 2020 Fitness-Tracker Made by @Sankirtana @Mahitha @Krithikha</p></em></b>
       </div>
     </section>
+    <script>
+
+function myFunction() {
+  var prev=document.getElementById("dem").value;
+
+  var exs = document.getElementById("exercise").value;
+  var integer = parseInt(exs);
+
+var th = document.getElementById("timeh").value;
+var tm = document.getElementById("timem").value;
+var k =parseInt(tm) + ((parseInt(th))*60);
+var result = (integer)*k/30;
+result=Math.round(result*100)/100;
+var total=parseInt(prev)+result;
+  
+  document.getElementById("dem").value=result;
+  document.getElementById("cal").value=total;
+}
+
+    </script>
   </body>
 </html>
