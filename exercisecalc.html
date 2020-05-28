@@ -25,7 +25,19 @@
       <a class="active"  href=""><em><b>Calorie Calculator</a></b></em>
       <a   href="exercise.html"><em><b>Yoga Facts</a></b></em>
     </div>
-   
+    <div class="content">
+      <nav id="side">
+       <ul>
+         <li><a href="#header">HOME</a></li>
+         <li><a href="#maps">ABOUT US</a></li>
+         <li><a href="#join">REGISTER</a></li>
+         <li><a href="bmi.html">BMI Calculator</a></li>
+         <li><a href="countdown.html">CountDown For Exercise</a></li>
+         <li><a href="exercisecalc.html">Calorie Calculator</a></li>
+         <li><a href="exercise.html">Yoga Facts</a></li>
+       </ul>
+     </nav>
+     <img src="https://royalposthumus.com/images/white_menu_icon.png" style="width: 100px;"id="menu">
     <section id="header">
     <div class="container" style="background-color:black;">
       <h3  align="center" style="color:white">Exercise Calculator</h3>
@@ -53,7 +65,7 @@
       </form>
     </div>
     </section>
-    <section id="features">
+    <section id="features" style="padding-left: 200px;">
       <div class="row">
          <div class="col">
            <img  src="https://cdn4.iconfinder.com/data/icons/medical-icons-rounded-vector/1250/path_health_calculator-512.png"></img>
@@ -100,6 +112,28 @@ var total=parseInt(prev)+result;
   document.getElementById("dem").value=result;
   document.getElementById("cal").value=total;
 }
+var menu=document.getElementById("menu");
+  var side=document.getElementById("side");
+  side.style.right="-250px";
+  menu.onclick=function(){
+    if(side.style.right=="-250px"){
+      side.style.right="0px"
+    }
+    else{
+      side.style.right="-250px"
+    }
+  }
+  var scroll = new SmoothScroll('a[href*="#"]');
+  window.onscroll = function() {myFunction()};
+  var navbar = document.getElementById("navbar");
+  var sticky = navbar.offsetTop;
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
 
     </script>
   </body>
