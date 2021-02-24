@@ -391,15 +391,18 @@ h2 big{
    #side a:hover, .dropdown-btn:hover {
      color: yellow;
    }
+
    .main {
      margin-left: 200px; 
      font-size: 20px; 
      padding: 0px 10px;
    }
+
    .active {
      background-color: yellow;
      color: white;
    }
+
    .dropdown-container {
      display: none;
      background-color: rebeccapurple;
