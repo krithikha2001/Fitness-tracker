@@ -1,15 +1,17 @@
 *{
      margin:0;
      padding:0;
-    
 }
+
 body{
      background-color: black;
      background-image: url("https://tse4.mm.bing.net/th?id=OIP.c_JDnC24vrlpXnHHVxI6UgHaPN&pid=Api&P=0&w=300&h=300");
 }
+
 li {list-style-type: none;
 font-size: 16pt;
 }
+
 #hour{
     color:black;
     font-size: xx-large;
@@ -22,6 +24,7 @@ font-size: 16pt;
     color:black;
     font-size: xx-large;
 }
+
 .mail {
 margin: auto;
 padding-top: 10px;
@@ -33,6 +36,7 @@ border: 1px soild silver;
 .mail h2 {
 margin-left: 38px;
 }
+
 input {
 font-size: 20pt;
 }
