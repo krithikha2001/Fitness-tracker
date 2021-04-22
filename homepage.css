@@ -24,9 +24,6 @@ form {
     width: 100%;
     text-align: center;
 }
-#sb{
-}
-
 #b{
   text-align:center;
 }
@@ -76,7 +73,6 @@ input {
 h4 {
     color: black;
     text-shadow: -2px -2px 5px white;
-    
 }
 
 *{
