@@ -16,8 +16,6 @@ form {
 }
 #label{
    font-size: 20px;
-   
-
 }
 #result {
     border: 1px solid black;
@@ -28,19 +26,7 @@ form {
 }
 #sb{
 }
-/*#sub{
-  background-color: black;
-    color: black;
 
-  display: inline-block;
-  box-sizing: content-box;
-  padding: 10px;
-  box-shadow: 2px 2px 20px 5px black;
-  width:100%;
-  max-width: 400px;
-  margin-left: 70px;
-
-}*/
 #b{
   text-align:center;
 }
